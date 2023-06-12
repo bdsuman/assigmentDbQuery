@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 //q2
-Route::get('q2',[PostController::class,'q2get']);
+Route::get('q2',[PostController::class,'q2']);
 
 //q3
 Route::get('/q3',[PostController::class,'q3']);
@@ -41,10 +41,23 @@ Route::get('/q7',[PostController::class,'q7']);
 Route::post('/q8',[PostController::class,'q8']);
 
 //q9
-Route::get('/q9',[PostController::class,'q9']);
+Route::get('/q9/{id}',[PostController::class,'q9']);
 
 //q10
-Route::get('/q10',[PostController::class,'q10']);
+Route::get('/q10{id}',[PostController::class,'q10']);
 
 //q11
 Route::get('/q11',[PostController::class,'q11']);
+
+//q12
+Route::get('/q12',[PostController::class,'q12']);
+
+//q13
+Route::get('/q13Exists',[PostController::class,'q13Exists']);
+Route::get('/q13DoesntExist',[PostController::class,'q13DoesntExist']);
+
+//q14
+Route::get('/q14',[PostController::class,'q14']);
+
+//q15
+Route::get('/q15/{id}',[PostController::class,'q15']);
